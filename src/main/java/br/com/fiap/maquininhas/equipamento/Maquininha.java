@@ -44,10 +44,11 @@ public class Maquininha {
 
     private EspecificacoesTecnicas especificacoesTecnicas;
 
-    public Maquininha(ModeloDaMaquina modelo, List<Cartao> cartoesAceitos, List<Voucher> vouchers, EspecificacoesTecnicas especificacoesTecnicas) {
+    public Maquininha(ModeloDaMaquina modelo, List<Cartao> cartoesAceitos, List<Voucher> vouchers, List<Comprovante> comprovantes, EspecificacoesTecnicas especificacoesTecnicas) {
         this.modelo = modelo;
         this.cartoesAceitos = cartoesAceitos;
         this.vouchers = vouchers;
+        this.comprovantes = comprovantes;
         this.especificacoesTecnicas = especificacoesTecnicas;
     }
 
