@@ -25,7 +25,7 @@ public class TaxaDeCompra {
     public TaxaDeCompra() {}
 
     public TaxaDeCompra(BigDecimal taxaAvista) {
-        this(taxaAvista, BigDecimal.ZERO, "");
+        this(taxaAvista, BigDecimal.ZERO, null);
     }
 
     public BigDecimal getTaxaAvista() {
