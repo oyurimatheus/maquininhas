@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static br.com.fiap.maquininhas.equipamento.Bandeira.*;
+import static br.com.fiap.maquininhas.equipamento.Comprovante.EMAIL;
+import static br.com.fiap.maquininhas.equipamento.Comprovante.IMPRESSO;
+import static br.com.fiap.maquininhas.equipamento.Comprovante.SMS;
 import static br.com.fiap.maquininhas.equipamento.Conexao.BLUETOOTH;
 import static br.com.fiap.maquininhas.equipamento.Conexao.CHIP_4G;
 import static br.com.fiap.maquininhas.equipamento.Conexao.WIFI;
@@ -61,12 +64,19 @@ public class FabricaDeMaquininha {
 
         }};
 
+        List<Comprovante> comprovantes = new ArrayList<Comprovante>(){{
+            add(EMAIL);
+            add(SMS);
+            add(IMPRESSO);
+
+        }};
+
         EspecificacoesTecnicas especificacoes= new EspecificacoesTecnicas(10, conexoes,
                 new Dimensao(19.0, 8.5, 6.6),
                 5, 455.0,
                 TOUCHSCREEN, COLORIDO_TOUCHSCREEN, BIVOLT);
 
 
-        return new Maquininha(ModeloDaMaquina.MODERNINHA_SMART, cartoes, vouchers, especificacoes);
+        return new Maquininha(ModeloDaMaquina.MODERNINHA_SMART, cartoes, vouchers, comprovantes, especificacoes);
     }
 }
