@@ -1,7 +1,6 @@
 package br.com.fiap.maquininhas.equipamento;
 
 import javax.persistence.*;
-import java.util.List;
 
 import static javax.persistence.EnumType.STRING;
 
@@ -25,6 +24,12 @@ public class Cartao {
         this.bandeira = bandeira;
         this.taxa = taxa;
     }
+
+    /**
+     * apenas frameworks
+     */
+    @Deprecated
+    public Cartao() {}
 
     public Long getId() {
         return id;
